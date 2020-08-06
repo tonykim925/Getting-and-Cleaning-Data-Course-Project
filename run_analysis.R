@@ -27,7 +27,7 @@ activity_labels <- read.table("./activity_labels.txt")
 # Combining test and train datasets
 x_total <- rbind(x_test, x_train)
 label_total <- rbind(label_test, label_train)
-sub_test <- rbind(sub_test, sub_train)
+sub_total <- rbind(sub_test, sub_train)
 
 # Setting column names with correct variable names  
 colnames(x_total) <- variable_names[,2]
@@ -37,11 +37,11 @@ label_total_renamed <- merge(label_total, activity_labels, by.x = "V1",
                              by.y = "V1", sort = FALSE)
 label_total_renamed <- rename(label_total_renamed, activitylabels = V2)[2]
 
-#Setting appropriate column name to sub_test
-sub_test <- rename(sub_test, subjectname = V1)
+#Setting appropriate column name to sub_total
+sub_total <- rename(sub_total, subjectname = V1)
 
 #combining main data set, subject name, and activity names
-combined_data <- cbind(sub_test, label_total_renamed, x_total)
+combined_data <- cbind(sub_total, label_total_renamed, x_total)
 View(combined_data)
 
 # Data has now been properly merged, descriptive activity names have been set 
