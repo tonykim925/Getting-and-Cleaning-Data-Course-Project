@@ -31,7 +31,7 @@ Please note that all of the files were downloaded as of 8/5/2020.
 
 ### codebook.md 
 
-The codebook.md file contains an updated list of all variables and summaries calculated along with units and other relevant information. 
+The codebook.md file contains information regarding the original dataset, updated list of all variables, all steps taken to transform the data, and other relevant information. 
 
 
 ### tidydata.txt 
