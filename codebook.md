@@ -58,20 +58,18 @@ These signals were used to estimate variables of the feature vector for each pat
 
 1. Downloaded the raw files (x_test, label_test, sub_test, x_train, label_train, sub_train, variable_names, activity_labels)
 
-2. Merged the appropriate sets (x_total <- x_test with x_train, label_total <- label_test with label_train, and sub_ sub_test with sub_train) 
+2. Merged the appropriate sets (x_total <- x_test with x_train, label_total <- label_test with label_train, and sub_total <- sub_test with sub_train) 
 
-3. Added descriptive variable names to the merged x_test using the information from variable_names data table 
+3. Added descriptive variable names to the merged x_test using the information from variable_names data table. Also set proper variable names to label_total, sub_total, and activity_labels.
 
-4. Substituted numerical values of activities with descriptive values by merging label_total and activity_labels. The new file is set to label_total_renamed. 
+4. Combined sub_total, label_total_renamed, and x_total to form one data table named combined_data.
 
-5. Renamed the sub_total column name from V1 to subjectname 
+5. Extracted mean and standard deviation for each measurement along with subjectname and activitylabels from combined_data to form a new data table named mean_std_only. 
 
-6. Combined sub_total, label_total_renamed, and x_total to form one data table named combined_data.
+6. Substituted numerical values of activities with descriptive values by merging mean_std_only and activity_labels. The new file is set to
+CleanData. 
 
-7. Extracted mean and standard deviation for each measurement along with subjectname and activitylabels from combined_data to form a new data table named mean_std_only. 
-
-8. Using the mean_std_only data table, aggregated an independent tidy data with the average of each variable by activityname and subjectname. 
-
+7. Using the CleanData data table, aggregated an independent tidy data with the average of each variable by activityname and subjectname. The new file is set to tidydata and saved. 
 
 
 

@@ -57,8 +57,6 @@ CleanData <- CleanData[,c(2,69,3:68)]
 tidydata <- aggregate(. ~subjectid+activitylabel, CleanData, mean)
 tidydata <- arrange(tidydata, subjectid)
 
-View(tidydata)
-View(mean_std_only)
 #saving the tidydata for github 
 write.table(tidydata, file = "tidydata.txt", row.name = F )
 
