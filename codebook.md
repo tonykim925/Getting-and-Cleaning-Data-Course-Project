@@ -20,28 +20,28 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 For each record it is provided:
 
-subjectname =  An identifier of the subject who carried out the experiment. (1-30 )
+**subjectname** =  An identifier of the subject who carried out the experiment. (1-30 )
 
-activitylabels = Activity label with 6 possible values (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+**activitylabels** = Activity label with 6 possible values (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
 
-Mean and standard deviation (std) of the following measurements:
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+**Mean and standard deviation (std) of the following measurements:**
+tBodyAcc-XYZ, 
+tGravityAcc-XYZ, 
+tBodyAccJerk-XYZ, 
+tBodyGyro-XYZ, 
+tBodyGyroJerk-XYZ, 
+tBodyAccMag, 
+tGravityAccMag, 
+tBodyAccJerkMag, 
+tBodyGyroMag, 
+tBodyGyroJerkMag, 
+fBodyAcc-XYZ, 
+fBodyAccJerk-XYZ, 
+fBodyGyro-XYZ, 
+fBodyAccMag, 
+fBodyAccJerkMag, 
+fBodyGyroMag, 
+fBodyGyroJerkMag, 
 
 **Information regarding the variables above** 
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
@@ -58,19 +58,19 @@ These signals were used to estimate variables of the feature vector for each pat
 
 1. Downloaded the raw files (x_test, label_test, sub_test, x_train, label_train, sub_train, variable_names, activity_labels)
 
-2. merged the appropriate sets (x_total <- x_test with x_train, label_total <- label_test with label_train, and sub_ sub_test with sub_train) 
+2. Merged the appropriate sets (x_total <- x_test with x_train, label_total <- label_test with label_train, and sub_ sub_test with sub_train) 
 
-3. descriptive variable names were added to the merged x_test using the information from variable_names data table 
+3. Added descriptive variable names to the merged x_test using the information from variable_names data table 
 
-4. Numerical values of activities were substituted with descriptive values by merging label_total and activity_labels. The new file is set to label_total_renamed. 
+4. Substituted numerical values of activities with descriptive values by merging label_total and activity_labels. The new file is set to label_total_renamed. 
 
-5. the sub_total column name is renamed from V1 to subjectname 
+5. Renamed the sub_total column name from V1 to subjectname 
 
-6. sub_total, label_total_renamed, and x_total are combined together to form one data table named combined_data.
+6. Combined sub_total, label_total_renamed, and x_total to form one data table named combined_data.
 
-7. With the data has properly merged, mean and standard deviation for each measurement with the subjectname and activitylabels are extracted to form a new data table named mean_std_only. 
+7. Extracted mean and standard deviation for each measurement along with subjectname and activitylabels from combined_data to form a new data table named mean_std_only. 
 
-8. Using the mean_std_only data table, an independent tidy data with the average of each variable by activityname and subjectname is created. 
+8. Using the mean_std_only data table, aggregated an independent tidy data with the average of each variable by activityname and subjectname. 
 
 
 
