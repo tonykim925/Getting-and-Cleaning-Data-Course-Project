@@ -24,7 +24,7 @@ subjectname =  An identifier of the subject who carried out the experiment. (1-3
 
 activitylabels = Activity label with 6 possible values (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
 
-Mean and standard deviation (std) of the following measurements: 
+Mean and standard deviation (std) of the following measurements:
 tBodyAcc-XYZ
 tGravityAcc-XYZ
 tBodyAccJerk-XYZ
